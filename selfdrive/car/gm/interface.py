@@ -57,6 +57,15 @@ class CarInterface(CarInterfaceBase):
       ret.steerRatio = 15.8
       ret.steerRatioRear = 0.
       ret.centerToFront = ret.wheelbase * 0.4 # wild guess
+      
+    elif candidate == CAR.IMPALA:
+      # Just testing for now
+      ret.minEnableSpeed = -1 * CV.MPH_TO_MS
+      ret.mass = 1754. + STD_CARGO_KG
+      ret.wheelbase = 2.83
+      ret.steerRatio = 15.2
+      ret.steerRatioRear = 0.
+      ret.centerToFront = ret.wheelbase * 0.4 # wild guess
 
     elif candidate == CAR.HOLDEN_ASTRA:
       ret.mass = 1363. + STD_CARGO_KG
