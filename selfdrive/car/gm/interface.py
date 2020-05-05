@@ -3,7 +3,7 @@ from cereal import car
 from selfdrive.config import Conversions as CV
 from selfdrive.controls.lib.drive_helpers import create_event, EventTypes as ET
 from selfdrive.car.gm.values import CAR, Ecu, ECU_FINGERPRINT, CruiseButtons, \
-                                    AccState, FINGERPRINTS
+                                    FINGERPRINTS, #AccState
 from selfdrive.car import STD_CARGO_KG, scale_rot_inertia, scale_tire_stiffness, is_ecu_disconnected, gen_empty_fingerprint
 from selfdrive.car.interfaces import CarInterfaceBase
 
@@ -57,7 +57,7 @@ class CarInterface(CarInterfaceBase):
       ret.steerRatio = 15.8
       ret.steerRatioRear = 0.
       ret.centerToFront = ret.wheelbase * 0.4 # wild guess
-      
+
     elif candidate == CAR.IMPALA:
       # Just testing for now
       ret.minEnableSpeed = -1 * CV.MPH_TO_MS
