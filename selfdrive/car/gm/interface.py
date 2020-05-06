@@ -60,6 +60,7 @@ class CarInterface(CarInterfaceBase):
 
     elif candidate == CAR.IMPALA:
       # Just testing for now
+      ret.openpilotLongitudinalControl = False
       ret.enableCruise = True
       ret.stoppingControl = False
       ret.minEnableSpeed = -1 * CV.MPH_TO_MS
