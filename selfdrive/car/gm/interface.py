@@ -3,7 +3,7 @@ from cereal import car
 from selfdrive.config import Conversions as CV
 from selfdrive.controls.lib.drive_helpers import create_event, EventTypes as ET
 from selfdrive.car.gm.values import CAR, Ecu, ECU_FINGERPRINT, CruiseButtons, \
-                                    FINGERPRINTS #AccState
+                                    AccState, FINGERPRINTS
 from selfdrive.car import STD_CARGO_KG, scale_rot_inertia, scale_tire_stiffness, is_ecu_disconnected, gen_empty_fingerprint
 from selfdrive.car.interfaces import CarInterfaceBase
 
@@ -60,6 +60,8 @@ class CarInterface(CarInterfaceBase):
 
     elif candidate == CAR.IMPALA:
       # Just testing for now
+      ret.enableCruise = True
+      ret.stoppingControl = False
       ret.minEnableSpeed = -1 * CV.MPH_TO_MS
       ret.mass = 1754. + STD_CARGO_KG
       ret.wheelbase = 2.83
