@@ -21,9 +21,9 @@ class CruiseButtons:
 
 class AccState:
   OFF        = 0
-  ACTIVE     = 1
-  FAULTED    = 3
-  STANDSTILL = 4
+  ACTIVE     = 3
+  #FAULTED    = 3
+  #STANDSTILL = 4
 
 class CanBus:
   POWERTRAIN = 0
